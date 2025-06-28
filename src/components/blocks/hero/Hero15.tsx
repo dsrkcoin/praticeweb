@@ -17,11 +17,11 @@ export default function Hero15() {
               <div className="row h-100">
                 <div className="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
                   <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                    We bring solutions to make life easier.
+                    TDS - Tax Deducted at Source
                   </h2>
 
                   <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                    We are a creative company that focuses on long term relationships with customers.
+                    Tax Deducted at Source (TDS) is a mechanism where tax is deducted by the payer...
                   </p>
 
                   <div className="animate__animated animate__slideInUp animate__delay-3s">
@@ -39,11 +39,11 @@ export default function Hero15() {
               <div className="row h-100">
                 <div className="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center">
                   <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                    We are trusted by over a million customers.
+                    Registration to Compliance —We’ve Got You Covered!
                   </h2>
 
                   <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                    Here a few reasons why our customers choose us.
+                    Trademark | Company Registration | ISO Certification | IT Services | Licenses | Tax & Compliance | Consumer Dispute
                   </p>
 
                   <div className="animate__animated animate__slideInUp animate__delay-3s">

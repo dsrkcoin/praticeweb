@@ -7,7 +7,7 @@ import Megaphone from "icons/lineal/Megaphone";
 
 // CUSTOM DATA
 
-export default function About() {
+export default function Proprietorship() {
   return (
     <Fragment>
       {/* ========== page title section ========== */}

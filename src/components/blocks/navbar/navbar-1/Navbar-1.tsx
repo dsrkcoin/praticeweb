@@ -60,7 +60,9 @@ export default function NavbarOne({
   // all main header contents
   const headerContent = (
     <Fragment>
-      <div className={`${navbarBg}  `}>
+      <div style={{
+        backgroundColor: '#00210d',
+      }}>
         <div className="container d-flex flex-lg-row flex-nowrap align-items-center">
           <div className="navbar-brand w-100">
             <NextLink
@@ -68,8 +70,8 @@ export default function NavbarOne({
               title={
                 <img
                   alt="logo"
-                  src={`/img/${logo}.png`}
-                  srcSet={`/img/${logo}@2x.png 2x`}
+                  src={`/img/logo.png`}
+                  width={100}
                 />
               }
             />
@@ -81,7 +83,7 @@ export default function NavbarOne({
             className="navbar-collapse offcanvas offcanvas-nav offcanvas-start"
           >
             <div className="offcanvas-header d-lg-none">
-              <h3 className="text-white fs-30 mb-0">Sandbox</h3>
+              <h3 className="text-white fs-30 mb-0">Legallens</h3>
               <button
                 type="button"
                 aria-label="Close"
@@ -94,6 +96,14 @@ export default function NavbarOne({
               <ul className="navbar-nav">
                 {/* ===================== Startup nav item ===================== */}
                 <Startup />
+              <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Registrations</a></li>
+                    <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Trademark</a></li>
+                    <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Goods & Services Tax</a></li>
+                    <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Income Tax </a></li>
+            
+                    <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Compliance</a></li>
+                   
+                     <li className="nav-item dropdown"><a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">About us</a></li>
               </ul>
 
               {/* ============= show contact info in the small device sidebar ============= */}

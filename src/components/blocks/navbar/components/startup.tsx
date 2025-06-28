@@ -8,6 +8,7 @@ import { startupLink, pages } from "data/navigation";
 
 export default function Startup() {
   return (
+    <>
     <li className="nav-item dropdown">
       <DropdownToggleLink
         title="Startup"
@@ -25,5 +26,6 @@ export default function Startup() {
         })}
       </ul>
     </li>
+      </>
   );
 }

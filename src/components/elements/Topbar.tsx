@@ -1,3 +1,4 @@
+import Background from "app/docs/elements/background/page";
 import clsx from "clsx";
 
 // =========================================================
@@ -12,9 +13,12 @@ export default function Topbar({ bgColor, textColor }: TopbarProps) {
     <div
       className={clsx({
         "fw-bold fs-15": true,
-        [bgColor || "bg-primary"]: true,
+        [bgColor || "bg-primary2"]: true,
         [textColor || "text-white"]: true,
       })}
+     style={{
+        backgroundColor: '#0a341b',
+      }}
     >
       <div className="container py-2 d-md-flex flex-md-row">
         <div className="d-flex flex-row align-items-center">
@@ -22,7 +26,7 @@ export default function Topbar({ bgColor, textColor }: TopbarProps) {
             <i className="uil uil-location-pin-alt" />
           </div>
 
-          <address className="mb-0">Moonshine St. 14/05 Light City</address>
+          <address className="mb-0">Hyderabd St. 14/05 Light City</address>
         </div>
 
         <div className="d-flex flex-row align-items-center me-6 ms-auto">
@@ -40,7 +44,7 @@ export default function Topbar({ bgColor, textColor }: TopbarProps) {
 
           <p className="mb-0">
             <a href="mailto:sandbox@email.com" className="link-white hover">
-              sandbox@email.com
+              legallens@gmail.com
             </a>
           </p>
         </div>
