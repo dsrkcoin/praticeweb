@@ -43,6 +43,29 @@ const cartList = [
   }
 ];
 
+const PartnershipList = [
+  {
+    size: 43,
+    quantity: 1,
+    salePrice: 45,
+    color: 'Andaman and Nicobar Islands',
+    regularPrice: 55,
+    title: 'Partnership',
+    image: '/img/photos/a3.jpg',
+    id: '62f3bac114a90b9c05bce066'
+  },
+  {
+    size: 43,
+    quantity: 1,
+    salePrice: 0,
+    color: 'Arunachal Pradesh',
+    regularPrice: 55,
+    title: 'Partnership',
+    image: '/img/photos/a3.jpg',
+    id: '62f3bad7afb837063e6e3de6'
+  }
+];
+
 const orderSummeryRow = [
   {
     name: 'Subtotal',
@@ -62,4 +85,4 @@ const orderSummeryRow = [
   }
 ];
 
-export { breadcrumb, tableHeading, cartList, orderSummeryRow };
+export { breadcrumb, tableHeading, cartList, PartnershipList, orderSummeryRow };
