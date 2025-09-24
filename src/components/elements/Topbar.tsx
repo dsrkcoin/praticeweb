@@ -12,15 +12,15 @@ export default function Topbar({ bgColor, textColor }: TopbarProps) {
   return (
     <div
       className={clsx({
-        "fw-bold fs-15": true,
+        "fs-15": true,
         [bgColor || "bg-primary2"]: true,
         [textColor || "text-white"]: true,
       })}
      style={{
-        backgroundColor: '#0a341b',
+        backgroundColor: '#246f33', lineHeight: '180%',
       }}
     >
-      <div className="container py-2 d-md-flex flex-md-row">
+      <div className="container d-md-flex flex-md-row">
         <div className="d-flex flex-row align-items-center">
           <div className="icon text-white fs-22 mt-1 me-2">
             <i className="uil uil-location-pin-alt" />

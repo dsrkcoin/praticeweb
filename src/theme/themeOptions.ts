@@ -37,9 +37,9 @@ const changeColor = (colorPath?: string | null, fontPath?: string | null) => {
 
 const changeTheme = (pathname: string) => {
   switch (pathname) {
-    case "/":
-      changeColor("/css/colors/grape.css", "/css/fonts/space.css");
-      break;
+    // case "/":
+    //   changeColor("/css/colors/grape.css", "/css/fonts/space.css");
+    //   break;
 
     case "/demo-1":
       changeColor("/css/colors/yellow.css", "/css/fonts/thicccboi.css");

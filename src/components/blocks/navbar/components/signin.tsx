@@ -1,6 +1,28 @@
 import LoginForm from "components/elements/forms/LoginForm";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Signin() {
+  const [user, setUser] = useState(null); // Stores logged-in user data
+  const router = useRouter();
+  const [closeModal, setCloseModal]   = useState(false);
+
+//   function handleCloseModal(){            
+//     document.getElementById("modal-signin")!.classList.remove("show", "d-block");
+//     document.getElementById("modal-signin")!.classList.add("d-none");
+//     document.querySelectorAll(".modal-backdrop")
+//             .forEach(el => el.classList.remove("modal-backdrop"));
+// }
+
+  // const handleLogin = () => { //userData:any
+  //   // setUser(userData);
+  //   // In a real app, you'd store a token (e.g., in a cookie or localStorage)
+  //   // and redirect to a protected page.
+  //   // alert(`Logged in as: ${userData.email}`);
+  //   handleCloseModal();
+  //   // router.push('/'); // Redirect to home page after successful login    
+  // };
+
   return (
     <div
       role="dialog"

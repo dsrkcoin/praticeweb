@@ -6,26 +6,16 @@ import renderLinks from "./render-links";
 // CUSTOM DATA
 import { startupLink, pages } from "data/navigation";
 
-export default function Startup() {
+export default function StartupNav() {
   return (
-    <>
     <li className="nav-item dropdown">
       <DropdownToggleLink
         title="Startup"
         className="nav-link dropdown-toggle"
       />
-
-      <ul className="dropdown-menu">
-        {startupLink.map(({ id, title, children }) => {
-          return (
-            <li className="dropdown dropdown-submenu dropend" key={id}>
-              {/* <DropdownToggleLink title={title} className="dropdown-item" /> */}
-              {renderLinks(children)}
-            </li>
-          );
-        })}
+      <ul className="dropdown-menu dropdown-lg">
+        <ul className="list-unstyled cc-3">{renderLinks(startupLink)}</ul>
       </ul>
     </li>
-      </>
   );
 }

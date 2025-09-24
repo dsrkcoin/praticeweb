@@ -25,18 +25,18 @@ import Navbar from "components/blocks/navbar/navbar-1/Navbar-1";
 import Footer9 from "components/blocks/footer/Footer9";
 
 const manrope = Manrope({
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
-  title: "Sandbox - Modern & Multipurpose NextJS Template",
-  description: "Sandbox is a beautiful and flawless site template.",
+  title: "Legallens India",
+  description: "Legallens India",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
-      <body className={manrope.className}>
+    <html lang="en" className="li-theme">
+      <body className="{manrope.className}">
         {/* ========== topbar section ========== */}
         <Topbar />
         {/* ========== header ========== */}
@@ -45,6 +45,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <Navbar
             info
             search
+            cart
             stickyBox={false}
             logoAlt="logo-light"
             navClassName="navbar navbar-expand-lg center-nav position-absolute navbar-dark caret-none"

@@ -36,37 +36,55 @@ export const serviceList1 = [
     id: 1,
     link: '#',
     icon: Search,
-    title: 'SEO Services',
+    title: 'Incorporation',
     linkText: 'Learn More',
     linkType: LinkType.yellow,
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    description: `Company incorporation process involves obtaining a Digital Signature Certificate (DSC) and Director Identification Number (DIN).`
   },
   {
     id: 2,
     link: '#',
     icon: Browser,
-    title: 'Web Design',
+    title: 'Trademark',
     linkText: 'Learn More',
     linkType: LinkType.red,
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    description: `Conduct a comprehensive search on the IP India website or through an attorney to ensure your proposed trademark is unique and not already in use.`
   },
   {
     id: 3,
     link: '#',
     icon: ChatTwo,
     linkType: LinkType.green,
-    title: 'Social Engagement',
+    title: 'Accounting',
     linkText: 'Learn More',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    description: `Maintain accounts, MCA and Income Tax compliance for your company with dedicated Accountant and LEDGERS platform.`
   },
   {
     id: 4,
     link: '#',
     icon: Megaphone,
     linkType: LinkType.blue,
-    title: 'Content Marketing',
+    title: 'Income Tax',
     linkText: 'Learn More',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    description: `We provides online income tax efiling, tax consultation, income tax notice and tax planning services for businesses and individuals.`
+  },
+  {
+    id: 5,
+    link: '#',
+    icon: Setting,
+    linkType: LinkType.blue,
+    title: 'GST Services',
+    linkText: 'Learn More',
+    description: `Get an Accountant & LEDGERS accounting software to manage your accounts, bookkeeping, payroll, GST and income tax filing.`
+  },
+  {
+    id: 6,
+    link: '#',
+    icon: CloudNetwork,
+    linkType: LinkType.blue,
+    title: 'Payroll',
+    linkText: 'Learn More',
+    description: `Maintain Payroll & tax compliances seamlessly through IndiaFilings.com. Get a Dedicated Accountant and LEDGERS compliance platform for your business.`
   }
 ];
 

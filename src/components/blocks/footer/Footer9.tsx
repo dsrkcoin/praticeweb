@@ -11,10 +11,10 @@ export default function Footer9() {
         <div className="row gy-6 gy-lg-0">
           <div className="col-lg-4">
             <div className="widget">
-              <img className="mb-4" src="/img/logo-light.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
+              <img className="mb-4" src="/img/logo.png" srcSet="/img/logo.png 2x" alt="" />
 
               <p className="mb-4">
-                © 2022 Sandbox. <br className="d-none d-lg-block" />
+                © 2025 Legallens India. <br className="d-none d-lg-block" />
                 All rights reserved.
               </p>
 
@@ -51,8 +51,8 @@ export default function Footer9() {
           <div className="col-md-4 col-lg-2">
             <div className="widget">
               <h4 className="widget-title mb-3 text-white">Get in Touch</h4>
-              <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
-              <NextLink title="info@email.com" href="mailto:#" />
+              <address>Hyderabd St. 14/05 Light City</address>
+              <NextLink title="legallens@gmail.com" href="mailto:#" />
               <br /> 00 (123) 456 78 90
             </div>
           </div>

@@ -2,6 +2,9 @@
 
 import { FormEvent, Fragment, useState } from "react";
 import NextLink from "components/reuseable/links/NextLink";
+import { auth } from "api/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import Signin from "components/blocks/navbar/components/signin";
 
 export default function RegisterForm() {
   const [name, setName] = useState("");
@@ -9,15 +12,56 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [visiblePassword, setVisiblePassword] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(email, password);
+  // const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   console.log(email, password);
+
+  //   if (password !== confirmPassword) {
+  //     setError('Passwords do not match.');
+  //     return;
+  //   }
+
+  //   try {
+  //     const response = await fetch('../../../api/register.js', { // API endpoint for signup
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ email, password }),
+  //     });
+
+  //     const data = await response.json();
+
+  //     if (response.ok) {
+  //       // Handle successful signup (e.g., redirect to login, show success message)
+  //       console.log('Signup successful:', data.message);
+  //       // router.push('/login'); // Example redirect if using Next.js router
+  //     } else {
+  //       setError(data.message || 'Signup failed.');
+  //     }
+  //   } catch (err) {
+  //     setError('An error occurred during signup.');
+  //     console.error('Signup error:', err);
+  //   }
+  // };
+
+  const handleSignup = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      alert("User registered successfully!");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    }
   };
 
   return (
     <Fragment>
-      <form onSubmit={handleSubmit} className="text-start mb-3">
+      <form onSubmit={handleSignup} className="text-start mb-3">
         <div className="form-floating mb-4">
           <input
             id="name"
@@ -74,13 +118,15 @@ export default function RegisterForm() {
           <label htmlFor="password-confirm">Confirm Password</label>
         </div>
 
+        {error && <p className="text-red-500">{error}</p>}
+
         <button type="submit" className="btn btn-primary rounded-pill btn-login w-100 mb-2">
           Sign Up
         </button>
       </form>
 
       <p className="mb-0">
-        Already have an account? <NextLink title="Sign in" href="/login" className="hover" />
+        Already have an account? <NextLink title="Sign in" href="#" data-bs-toggle="modal" data-bs-target="#modal-signin" className="hover" />
       </p>
 
       <div className="divider-icon my-4">or</div>
@@ -99,4 +145,11 @@ export default function RegisterForm() {
       </nav>
     </Fragment>
   );
+
+  return (
+      <Fragment>
+        {/* ============= signup modal ============= */}
+              <Signin />
+      </Fragment>
+    );
 }

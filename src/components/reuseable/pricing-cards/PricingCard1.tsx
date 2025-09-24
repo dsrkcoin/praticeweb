@@ -21,14 +21,14 @@ export default function PricingCard1(props: PricingCard1Props) {
   const monthClasses = !activeYearly ? "price-show" : "price-hide price-hidden";
 
   return (
-    <div className="pricing card shadow-lg">
-      <div className="card-body pb-12">
-        <div className="prices text-dark">
+    <div className="pricing card shadow-lg h-100">
+      <div className="card-body p-5">
+        {/* <div className="prices text-dark">
           <Price duration="mo" value={monthlyPrice} classes={monthClasses} />
           <Price duration="yr" value={yearlyPrice} classes={yearClasses} />
-        </div>
+        </div> */}
 
-        <h4 className="card-title mt-2">{planName} Plan</h4>
+        <h4 className="card-title mt-2">{planName}</h4>
 
         <ul className={clsx({ "icon-list bullet-soft-primary mt-7 mb-8": true, "bullet-bg": bulletBg })}>
           {features.map((item, i) => (
@@ -43,7 +43,7 @@ export default function PricingCard1(props: PricingCard1Props) {
 
         <NextLink
           href="#"
-          title="Choose Plan"
+          title="ADD"
           className={`btn btn-primary ${roundedButton ? "rounded" : "rounded-pill"}`}
         />
       </div>

@@ -16,29 +16,29 @@ const cartList = [
     size: 43,
     quantity: 1,
     salePrice: 45,
-    color: 'Black',
+    color: 'GST Software & Registration',
     regularPrice: 55,
-    title: 'Nike Air Sneakers',
-    image: '/img/photos/sth1.jpg',
+    title: 'Proprietorship',
+    image: '/img/photos/a3.jpg',
     id: '62f3bac114a90b9c05bce066'
   },
   {
     size: 43,
     quantity: 1,
     salePrice: 0,
-    color: 'Misc',
+    color: 'GST Filing & Registration - 6 Months',
     regularPrice: 55,
-    title: 'Headphones',
-    image: '/img/photos/sth2.jpg',
+    title: 'Proprietorship',
+    image: '/img/photos/a3.jpg',
     id: '62f3bad7afb837063e6e3de6'
   },
   {
     quantity: 1,
     salePrice: 0,
-    color: 'Black',
+    color: 'GST Filing & Registration - 12 Months',
     regularPrice: 55,
-    title: 'Apple Watch',
-    image: '/img/photos/sth3.jpg',
+    title: 'Proprietorship',
+    image: '/img/photos/a3.jpg',
     id: '62f3bb3a8ee7c0fd2d072f52'
   }
 ];

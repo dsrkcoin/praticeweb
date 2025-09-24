@@ -2,23 +2,85 @@
 
 import { FormEvent, Fragment, useState } from "react";
 import NextLink from "components/reuseable/links/NextLink";
+import Signup from "components/blocks/navbar/components/signup";
+import { sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "api/firebase";
 
-export default function LoginForm() {
+export default function LoginForm() {  //{ onLogin }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visiblePassword, setVisiblePassword] = useState(false);
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(email, password);
+  // const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   console.log(email, password);
+  //   // In a real application, you would send these credentials to a backend API
+  //   // for authentication. For this example, we'll simulate a successful login.
+  //   if (email === 'test@example.com' && password === 'password123') {
+  //     onLogin({ email }); // Pass user data to the parent component
+  //   } else {
+  //     setError('Invalid email or password.');
+  //   }
+  // };
+
+  function handleCloseModal(){            
+    document.getElementById("modal-signin")!.classList.remove("show", "d-block");
+    document.getElementById("modal-signin")!.classList.add("d-none");
+    document.querySelectorAll(".modal-backdrop")
+            .forEach(el => el.classList.remove("modal-backdrop"));
+    document.querySelectorAll(".modal-open").forEach(el => el.classList.add("overflow-y-auto", "p-0"));
+}
+
+  const handleLogin = async (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert("Logged in successfully!");
+      handleCloseModal();
+      // onLogin();
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      alert("Logged in with Google 🎉");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    if (!email) {
+      setError("Please enter your email first.");
+      return;
+    }
+    try {
+      await sendPasswordResetEmail(auth, email);
+      setMessage("Password reset email sent! Check your inbox 📩");
+      //setError(null);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    }
   };
 
   return (
     <Fragment>
-      <h2 className="mb-3 text-start">Welcome Back</h2>
+      <h2 className="mb-3 text-start">Welcome</h2>
       <p className="lead mb-6 text-start">Fill your email and password to sign in.</p>
 
-      <form onSubmit={handleSubmit} className="text-start mb-3">
+      <form onSubmit={handleLogin} className="text-start mb-3">
+        {error && <p className="text-red-500">{error}</p>}
         <div className="form-floating mb-4">
           <input
             type="email"
@@ -47,23 +109,25 @@ export default function LoginForm() {
           <label htmlFor="loginPassword">Password</label>
         </div>
 
+        {error && <p className="text-red-500">{error}</p>}
+
         <button type="submit" className="btn btn-primary rounded-pill btn-login w-100 mb-2">
           Sign In
         </button>
       </form>
 
       <p className="mb-1">
-        <NextLink title="Forgot Password?" href="/register" className="hover" />
+        <NextLink title="Forgot Password?" href="#" onClick={handleForgotPassword} className="hover" />
       </p>
 
       <p className="mb-0">
-        Don&apos;t have an account? <NextLink title="Sign up" href="/register" className="hover" />
+        Don&apos;t have an account? <NextLink title="Sign up" data-bs-toggle="modal" data-bs-target="#modal-signup" href="#" className="hover" />
       </p>
 
       <div className="divider-icon my-4">or</div>
 
       <nav className="nav social justify-content-center text-center">
-        <a href="#" target="__blank" className="btn btn-circle btn-sm btn-google">
+        <a href="#" target="__blank" className="btn btn-circle btn-sm btn-google" onClick={handleGoogleLogin}>
           <i className="uil uil-google" />
         </a>
 
@@ -75,6 +139,13 @@ export default function LoginForm() {
           <i className="uil uil-twitter" />
         </a>
       </nav>
+    </Fragment>
+  );
+
+  return (
+    <Fragment>
+      {/* ============= signup modal ============= */}
+            <Signup />
     </Fragment>
   );
 }

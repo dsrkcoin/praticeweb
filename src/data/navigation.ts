@@ -39,16 +39,153 @@ const demos = [
 ];
 
 // pages navigations
-const startupLink = [
-   {
-    id: 1,
-    title: "Startup",
-    children: [
-      { id: 1, title: "Proprietorship", url: "/proprietorship" },
-      
-    ]
-  }
-]
+const startupLink =  [
+    { id: 1, title: "Proprietorship", url: "/proprietorship" },
+    { id: 2, title: "Partnership", url: "/Partnership" },
+    { id: 3, title: "One Person Company", url: "/OnePersonCompany" },
+    { id: 4, title: "Limited Liability Partnership", url: "/LimitedLiabilityPartnership" },
+    { id: 5, title: "Private Limited Company", url: "/PrivateLimitedCompany" },
+    { id: 6, title: "Section 8 Company", url: "/Section8Company" },
+    { id: 7, title: "Trust Registration", url: "/TrustRegistration" },
+    { id: 8, title: "Public Limited Company", url: "/PublicLimitedCompany" },
+    { id: 9, title: "Producer Company", url: "/ProducerCompany" },
+    { id: 10, title: "Indian Subsidiary", url: "/IndianSubsidiary" }
+  ];
+
+const registrationsLink =  [
+    { id: 1, title: "Startup India", url: "/StartupIndia" },
+    { id: 2, title: 'Trade License', url: '/TradeLicense' },
+    { id: 3, title: "FSSAI Registration", url: "/FSSAIRegistration" },
+    { id: 4, title: "FSSAI License", url: "/FSSAILicense" },
+    { id: 5, title: "Halal License & Certification", url: "/HalalLicenseCertification" },
+    { id: 6, title: "ICEGATE Registration", url: "/ICEGATERegistration" },
+    { id: 7, title: "Import Export Code", url: "/ImportExportCode" },
+    { id: 8, title: "Legal Entity Identifier Code", url: "/LegalEntityIdentifierCode" },
+    { id: 9, title: "ISO Registration", url: "/ISORegistration" },
+    { id: 10, title: "PF Registration", url: "/PFRegistration" },
+    { id: 11, title: "ESI Registration", url: "/ESIRegistration" },
+    { id: 12, title: "Professional Tax Registration", url: "/ProfessionalTaxRegistration" },
+    { id: 13, title: "RCMC Registration", url: "/RCMCRegistration" },
+    { id: 14, title: "TN RERA Registration for Agents", url: "/TNRERARegistrationforAgents" },
+    { id: 15, title: "12A and 80G Registration", url: "/TwelveAand80GRegistration" },
+    { id: 16, title: "12A Registration", url: "/TwelveARegistration" },
+    { id: 17, title: "80G Registration", url: "/EightyGRegistration" },
+    { id: 18, title: "APEDA Registration", url: "/APEDARegistration" },
+    { id: 19, title: "Barcode Registration", url: "/BarcodeRegistration" },
+    { id: 20, title: "BIS Registration", url: "/BISRegistration" },
+    { id: 21, title: "Certificate of Incumbency", url: "/CertificateofIncumbency" },
+    { id: 22, title: "Darpan Registration", url: "/DarpanRegistration" },
+    { id: 23, title: "Digital Signature", url: "/DigitalSignature" },
+    { id: 24, title: "Shop Act Registration", url: "/ShopActRegistration" },
+    { id: 25, title: "Drug License", url: "/DrugLicense" },
+    { id: 26, title: "Udyam Registration", url: "/UdyamRegistration" },
+    { id: 27, title: "FCRA Registration", url: "/FCRARegistration" },
+    { id: 28, title: "Fire License", url: "/FireLicense" }
+  ];
+
+const trademarkLink = [
+    { id: 1, title: "Trademark Registration", url: "/TrademarkRegistration" },
+    { id: 2, title: "Trademark Objection", url: "/TrademarkObjection" },
+    { id: 3, title: "Trademark Certificate", url: "/TrademarkCertificate" },
+    { id: 4, title: "Trademark Opposition", url: "/TrademarkOpposition" },
+    { id: 5, title: "Trademark Hearing", url: "/TrademarkHearing" },
+    { id: 6, title: "Trademark Rectification", url: "/TrademarkRectification" },
+    { id: 7, title: "TM Infringement Notice", url: "/TMInfringementNotice" },
+    { id: 8, title: "Trademark Renewal", url: "/TrademarkRenewal" },
+    { id: 9, title: "Trademark Transfer", url: "/TrademarkTransfer" },
+    { id: 10, title: "Expedited TM Registration", url: "/ExpeditedTMRegistration" },
+    { id: 11, title: "Logo Designing", url: "/LogoDesigning" },
+    { id: 12, title: "Design Registration", url: "/DesignRegistration" },
+    { id: 13, title: "Design Objection", url: "/DesignObjection" },
+    { id: 14, title: "Copyright Registration", url: "/CopyrightRegistration" },
+    { id: 15, title: "Copyright Objection", url: "/CopyrightObjection" },
+    { id: 16, title: "Patent Registration", url: "/PatentRegistration" },
+    { id: 17, title: "Trademark Protection", url: "/TrademarkProtection" }
+  ];
+
+const gstLink = [
+    { id: 1, title: "GST Registration", url: "/GSTRegistration" },
+    { id: 2, title: "GST Return Filing by Accountant", url: "/GSTReturnFilingbyAccountant" },
+    { id: 3, title: "GST NIL Return Filing", url: "/GSTNILReturnFiling" },
+    { id: 4, title: "GST E-Invoicing Software", url: "/GSTEInvoicingSoftware" },
+    { id: 5, title: "GST LUT Form", url: "/GSTLUTForm" },
+    { id: 6, title: "GST Notice", url: "/GSTNotice" },
+    { id: 7, title: "GST Annual Return Filing (GSTR-9)", url: "/GSTAnnualReturnFilingGSTR9" },
+    { id: 8, title: "GST Registration for Foreigners", url: "/GSTRegistrationforForeigners" },
+    { id: 9, title: "GST Invoicing & Filing Software", url: "/GSTInvoicingFilingSoftware" },
+    { id: 10, title: "GST Amendment", url: "/GSTAmendment" },
+    { id: 11, title: "GST Revocation", url: "/GSTRevocation" },
+    { id: 12, title: "GSTR-10", url: "/GSTR10" },
+    { id: 13, title: "GST Software for Accountants", url: "/GSTSoftwareforAccountants" },
+    { id: 14, title: "Virtual Office + GSTIN", url: "/VirtualOfficeGSTIN" }
+  ];
+
+const incometaxLink = [
+   { id: 1, title: "Income Tax E-Filing", url: "/IncomeTaxEFiling" },
+    { id: 2, title: "Business Tax Filing", url: "/BusinessTaxFiling" },
+    { id: 3, title: "ITR-1 Return Filing", url: "/ITR1ReturnFiling" },
+    { id: 4, title: "ITR-2 Return Filing", url: "/ITR2ReturnFiling" },
+    { id: 5, title: "ITR-3 Return Filing", url: "/ITR3ReturnFiling" },
+    { id: 6, title: "ITR-4 Return Filing", url: "/ITR4ReturnFiling" },
+    { id: 7, title: "ITR-5 Return Filing", url: "/ITR5ReturnFiling" },
+    { id: 8, title: "ITR-6 Return Filing", url: "/ITR6ReturnFiling" },
+    { id: 9, title: "ITR-7 Return Filing", url: "/ITR7ReturnFiling" },
+    { id: 10, title: "15CA - 15CB Filing", url: "/FifteenCA15CBFiling" },
+    { id: 11, title: "TAN Registration", url: "/TANRegistration" },
+    { id: 12, title: "TDS Return Filing", url: "/TDSReturnFiling" },
+    { id: 13, title: "Income Tax Notice", url: "/IncomeTaxNotice" }
+  ];
+
+const MCALink = [
+   { id: 1, title: "Company Compliance", url: "/CompanyCompliance" },
+    { id: 2, title: "LLP Compliance", url: "/LLPCompliance" },
+    { id: 3, title: "OPC Compliance", url: "/OPCCompliance" },
+    { id: 4, title: "Name Change - Company", url: "/NameChangeCompany" },
+    { id: 5, title: "Registered Office Change", url: "/RegisteredOfficeChange" },
+    { id: 6, title: "DIN eKYC Filing", url: "/DINeKYCFiling" },
+    { id: 7, title: "DIN Reactivation", url: "/DINReactivation" },
+    { id: 8, title: "Director Change", url: "/DirectorChange" },
+    { id: 9, title: "Remove Director", url: "/RemoveDirector" },
+    { id: 10, title: "ADT-1 Filing", url: "/ADT1Filing" },
+    { id: 11, title: "DPT-3 Filing", url: "/DPT3Filing" },
+    { id: 12, title: "LLP Form 11 Filing", url: "/LLPForm11Filing" },
+    { id: 13, title: "Dormant Status Filing", url: "/DormantStatusFiling" },
+    { id: 14, title: "MOA Amendment", url: "/MOAAmendment" },
+    { id: 15, title: "AOA Amendment", url: "/AOAAmendment" },
+    { id: 16, title: "Authorized Capital Increase", url: "/AuthorizedCapitalIncrease" },
+    { id: 17, title: "Share Transfer", url: "/ShareTransfer" },
+    { id: 18, title: "Demat of Shares", url: "/DematofShares" },
+    { id: 19, title: "Winding Up - LLP", url: "/WindingUpLLP" },
+    { id: 20, title: "Winding Up - Company", url: "/WindingUpCompany" },
+    { id: 21, title: "Commencement (INC-20A)", url: "/CommencementINC20A" }
+  ];
+
+const complianceLink = [
+    { id: 1, title: "FDI Filing with RBI", url: "/FDIFilingwithRBI" },
+    { id: 2, title: "FLA Return Filing", url: "/FLAReturnFiling" },
+    { id: 3, title: "FSSAI Renewal", url: "/FSSAIRenewal" },
+    { id: 4, title: "FSSAI Return Filing", url: "/FSSAIReturnFiling" },
+    { id: 5, title: "Business Plan", url: "/BusinessPlan" },
+    { id: 6, title: "HR & Payroll", url: "/HRPayroll" },
+    { id: 7, title: "PF Return Filing", url: "/PFReturnFiling" },
+    { id: 8, title: "ESI Return Filing", url: "/ESIReturnFiling" },
+    { id: 9, title: "Professional Tax Return Filing", url: "/ProfessionalTaxReturnFiling" },
+    { id: 10, title: "Partnership Compliance", url: "/PartnershipCompliance" },
+    { id: 11, title: "Proprietorship Compliance", url: "/ProprietorshipCompliance" },
+    { id: 12, title: "Bookkeeping", url: "/Bookkeeping" }
+  ];
+
+const globalLink = [
+    { id: 1, title: "UAE Company", url: "/UAECompany" },
+    { id: 2, title: "USA Company", url: "/USACompany" },
+    { id: 3, title: "Singapore Company", url: "/SingaporeCompany" },
+    { id: 4, title: "UK Company", url: "/UKCompany" },
+    { id: 5, title: "USA Trademark Registration", url: "/USATrademarkRegistration" },
+    { id: 6, title: "International Trademark", url: "/InternationalTrademark" },
+    { id: 7, title: "UAE eCommerce", url: "/UAEeCommerce" },
+    { id: 8, title: "UAE Embassy Attestation", url: "/UAEEmbassyAttestation" }
+  ];
+
 const pages = [
   {
     id: 21,
@@ -237,4 +374,4 @@ const blocksNavigation = [
   }
 ];
 
-export { startupLink, demos, pages, blogsNavigation, blocksNavigation, projectsNavigation, documentationNavigation };
+export { startupLink, registrationsLink, trademarkLink, gstLink, incometaxLink, MCALink, complianceLink, globalLink, demos, pages, blogsNavigation, blocksNavigation, projectsNavigation, documentationNavigation };

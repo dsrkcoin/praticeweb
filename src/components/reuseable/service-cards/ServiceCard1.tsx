@@ -25,9 +25,9 @@ export default function ServiceCard1({
   iconClassName = ""
 }: ServiceCard1Props) {
   return (
-    <div className="col-md-6 col-xl-3">
-      <div className={`card shadow-lg ${cardClassName}`}>
-        <div className="card-body">
+    <div className="col-md-6 col-xl-4">
+      <div className={`card h-100 shadow-lg ${cardClassName}`}>
+        <div className="card-body p-3">
           <Icon className={iconClassName} />
           <h4>{title}</h4>
           <p className="mb-2">{description}</p>

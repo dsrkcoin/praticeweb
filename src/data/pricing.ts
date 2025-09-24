@@ -8,14 +8,14 @@ export const pricingList1 = [
   {
     monthlyPrice: 19,
     yearlyPrice: 199,
-    planName: 'Premium',
-    features: ['5 Projects', '100K API Access', '200MB Storage', 'Weekly Reports', '7/24 Support']
+    planName: 'GST Software & Registration',
+    features: ['GST Registration Application', 'DIY GST Clarification', 'DIY GST Filing', 'LEDGERS GST Software - 1 Year License']
   },
   {
     monthlyPrice: 49,
     yearlyPrice: 499,
-    planName: 'Corporate',
-    features: ['20 Projects', '300K API Access', '500MB Storage', 'Weekly Reports', '7/24 Support']
+    planName: 'GST Filing & Registration - 6 Months',
+    features: ['GST Registration Application', 'DIY GST Clarification', 'GST Filing by Accountant 6 Months', 'GST Filing Training & Setup', 'LEDGERS GST Software - 1 Year License']
   }
 ];
 
