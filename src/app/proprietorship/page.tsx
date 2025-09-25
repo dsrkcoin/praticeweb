@@ -28,7 +28,7 @@ export default function Proprietorship() {
       <section className="wrapper bg-light angled upper-end lower-end">
         <div className="container py-14 py-md-8">
           <div className="row"><Breadcrumb
-            data={[{ id: 1, title: 'Home', url: '#' }, { id: 2, title: 'Proprietorship', url: '' }]}
+            data={[{ id: 1, title: 'Home', url: '#' }, { id: 2, title: 'Business Registration', url: 'StartUp' }, { id: 3, title: 'Proprietorship', url: '' }]}
           /></div>
           <div className="row gy-10 mb-14 mb-md-8 align-items-stretch">
             <div className="col-lg-8 position-relative">
@@ -138,10 +138,10 @@ export default function Proprietorship() {
                 for small businesses with up to 5 employees.
               </p>
               <h3>
-                Register Your Sole Proprietorship Online with IndiaFilings
+                Register Your Sole Proprietorship Online with LegallensIndia
               </h3>
               <p>
-                IndiaFilings makes it easy to register your proprietorship firm
+                LegallensIndia makes it easy to register your proprietorship firm
                 online. Our expert team ensures a smooth and efficient
                 registration process, helping solo entrepreneurs bring their
                 business ideas to life. Get started with your sole
@@ -161,7 +161,7 @@ export default function Proprietorship() {
               </p>
 
               <p>
-                At IndiaFilings, we make the process of registering your
+                At LegallensIndia, we make the process of registering your
                 proprietorship firm online simple and hassle-free. With our
                 expert support, you can quickly formalize your business and
                 start operating with confidence.
